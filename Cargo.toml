@@ -13,4 +13,5 @@ humantime = "^2.0"
 itertools = "0.10.0"
 log = { version = "^0.4", features = ["std"] }
 rayon = "^1.5"
+structopt = "^0.2"
 
