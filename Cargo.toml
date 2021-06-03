@@ -1,0 +1,16 @@
+[package]
+name = "primes-rust"
+version = "0.1.0"
+authors = ["Jason Reilly <jdr0887@gmail.com>"]
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+env_logger = "^0.8"
+humantime = "^2.0"
+itertools = "0.10.0"
+log = { version = "^0.4", features = ["std"] }
+rayon = "^1.5"
+
