@@ -21,18 +21,26 @@ fn main() -> Result<(), Box<dyn error::Error>> {
     info!("{:?}", options);
 
     let ceiling = options.ceiling;
-    let mut prime_data: Vec<bool> = vec![false; ceiling + 1];
+    let mut sieve: Vec<bool> = vec![false; ceiling + 1];
     let n = (ceiling - 1) / 2;
     let mut x = 1;
     while x <= n {
         let mut y = x.clone();
         while (x + y + 2 * x * y) <= n {
             let idx = x + y + 2 * x * y;
-            prime_data[idx] = true;
+            sieve[idx] = true;
             y = y + 1;
         }
         x = x + 1;
     }
+
+    // let mut prime_data: Vec<usize> = vec![2];
+    //
+    // for i in 1..(ceiling + 1) {
+    //     if sieve[i] {
+    //         prime_data.push(2 * i + 1);
+    //     }
+    // }
 
     // let mut found_primes = prime_data.into_iter().enumerate().filter(|(_, a)| *a).map(|(idx, _)| idx).collect_vec();
     // found_primes.sort();
