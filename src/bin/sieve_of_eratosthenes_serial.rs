@@ -38,7 +38,6 @@ fn main() -> Result<(), Box<dyn error::Error>> {
     // let mut found_primes = prime_data.into_iter().enumerate().filter(|(_, a)| *a).map(|(idx, _)| idx).collect_vec();
     // found_primes.sort();
     // debug!("ceiling: {}, primes: {}", ceiling, found_primes.iter().join(","));
-
     info!("Duration: {}", format_duration(start.elapsed()).to_string());
     Ok(())
 }
